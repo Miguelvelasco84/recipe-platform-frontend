@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Receta - RecipeHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">RecipeHub</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="all-recipes.html" class="nav-link">Todas las Recetas</a></li>
+                <li class="nav-item"><a href="add-recipe.html" class="nav-link">Agregar Receta</a></li>
+                <li class="nav-item"><a href="search.html" class="nav-link">Buscar</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Acerca de</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="form-container">
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a> > 
+                <a href="all-recipes.html">Recetas</a> > 
+                <span>Editar</span>
+            </div>
+            
+            <h1>Editar Receta</h1>
+            <p>Modifica los detalles de tu receta</p>
+
+            <form id="edit-recipe-form" class="recipe-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Nombre de la Receta *</label>
+                    <input type="text" id="name" name="name" class="form-input" required maxlength="200">
+                </div>
+
+                <div class="form-group">
+                    <label for="description" class="form-label">Descripción</label>
+                    <textarea id="description" name="description" class="form-textarea" rows="3"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category" class="form-label">Categoría</label>
+                        <select id="category" name="category" class="form-select">
+                            <option value="">Seleccionar categoría</option>
+                            <option value="desayuno">Desayuno</option>
+                            <option value="almuerzo">Almuerzo</option>
+                            <option value="cena">Cena</option>
+                            <option value="postre">Postre</option>
+                            <option value="aperitivo">Aperitivo</option>
+                            <option value="bebida">Bebida</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="difficulty" class="form-label">Dificultad</label>
+                        <select id="difficulty" name="difficulty" class="form-select">
+                            <option value="">Seleccionar dificultad</option>
+                            <option value="facil">Fácil</option>
+                            <option value="medio">Medio</option>
+                            <option value="dificil">Difícil</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prep_time" class="form-label">Tiempo de Preparación (min)</label>
+                        <input type="number" id="prep_time" name="prep_time" class="form-input" min="1" max="1440">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cook_time" class="form-label">Tiempo de Cocción (min)</label>
+                        <input type="number" id="cook_time" name="cook_time" class="form-input" min="1" max="1440">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servings" class="form-label">Porciones</label>
+                        <input type="number" id="servings" name="servings" class="form-input" min="1" max="50">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredients" class="form-label">Ingredientes *</label>
+                    <textarea id="ingredients" name="ingredients" class="form-textarea" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions" class="form-label">Instrucciones *</label>
+                    <textarea id="instructions" name="instructions" class="form-textarea" rows="8" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tags" class="form-label">Etiquetas</label>
+                    <input type="text" id="tags" name="tags" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="image" class="form-label">Cambiar Imagen</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="image" name="image" class="file-input" accept="image/*">
+                        <label for="image" class="file-input-label">
+                            📸 Seleccionar nueva imagen (máx. 5MB)
+                        </label>
+                    </div>
+                    <div id="image-preview"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Actualizar Receta</button>
+                    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 RecipeHub. Desarrollado con ❤️ para los amantes de la cocina.</p>
+        </div>
+    </footer>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/api.js"></script>
+</body>
+</html>

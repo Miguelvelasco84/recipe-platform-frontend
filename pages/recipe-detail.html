@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Receta - RecipeHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="../index.html" style="text-decoration: none; color: inherit;">RecipeHub</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="all-recipes.html" class="nav-link">Todas las Recetas</a></li>
+                <li class="nav-item"><a href="add-recipe.html" class="nav-link">Agregar Receta</a></li>
+                <li class="nav-item"><a href="search.html" class="nav-link">Buscar</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Acerca de</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a> > 
+                <a href="all-recipes.html">Recetas</a> > 
+                <span>Detalle</span>
+            </div>
+            
+            <div id="recipe-detail-container">
+                <!-- El contenido se cargará dinámicamente -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 RecipeHub. Desarrollado con ❤️ para los amantes de la cocina.</p>
+        </div>
+    </footer>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/api.js"></script>
+</body>
+</html>

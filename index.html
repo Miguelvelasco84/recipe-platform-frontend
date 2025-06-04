@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeHub - Plataforma de Recetas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>RecipeHub</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/all-recipes.html" class="nav-link">Todas las Recetas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/add-recipe.html" class="nav-link">Agregar Receta</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/search.html" class="nav-link">Buscar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/about.html" class="nav-link">Acerca de</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bienvenido a RecipeHub</h1>
+                <p>Tu plataforma favorita para descubrir, compartir y organizar recetas deliciosas</p>
+                <div class="hero-buttons">
+                    <a href="pages/add-recipe.html" class="btn btn-primary">Agregar Receta</a>
+                    <a href="pages/all-recipes.html" class="btn btn-secondary">Ver Recetas</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>¿Qué puedes hacer?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Registrar Recetas</h3>
+                        <p>Agrega tus recetas favoritas con ingredientes, pasos y fotos</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Buscar y Filtrar</h3>
+                        <p>Encuentra recetas por nombre, ingredientes o características</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✏️</div>
+                        <h3>Editar y Organizar</h3>
+                        <p>Modifica tus recetas y mantén tu colección actualizada</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Acceso Móvil</h3>
+                        <p>Disfruta de la plataforma desde cualquier dispositivo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-recipes">
+            <div class="container">
+                <h2>Recetas Recientes</h2>
+                <div id="recent-recipes-container" class="recipes-grid">
+                    <!-- Las recetas se cargarán dinámicamente -->
+                </div>
+                <div class="text-center">
+                    <a href="pages/all-recipes.html" class="btn btn-outline">Ver Todas las Recetas</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 RecipeHub. Desarrollado con ❤️ para los amantes de la cocina.</p>
+        </div>
+    </footer>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
