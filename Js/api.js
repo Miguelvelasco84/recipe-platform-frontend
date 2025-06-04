@@ -2,7 +2,7 @@
 
 // Configuración de la API
 const API_CONFIG = {
-    BASE_URL: 'https://your-render-app.onrender.com/api', // Cambiar por tu URL de Render
+    BASE_URL: 'https://recipe-platform-backend-gguu.onrender.com', // Cambiar por tu URL de Render
     ENDPOINTS: {
         RECIPES: '/recipes',
         RECIPE_BY_ID: '/recipes/',
